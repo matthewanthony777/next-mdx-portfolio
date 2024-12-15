@@ -10,6 +10,9 @@ export default function Intro() {
           I&#39;m an Irish software engineer based in London. I&#39;m
           passionate about learning new technologies and sharing knowledge with
           others.
+          actively contributing to discussions about technology's impact on legal frameworks and society. 
+          Through various mediums including digital content, journalism, and written work, 
+          he makes complex technological and legal concepts accessible while advancing important conversations about social and political reform.
         </p>
       </div>
       <div className='relative'>
