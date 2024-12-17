@@ -6,9 +6,10 @@
   publishedAt: '2024-12-15'
 ---
 
-This is a python-based simulation that demonstrates temporal inversion by recording 
- video footage and playing it backwards, allowing users to experience time-reversed
- interactions as seen in Christopher Nolan's 2020 film "Tenet".
+Unlock the thrill of time travel with this engaging Python-based simulation! 
+Imagine capturing a moment on video and then watching it unfold in reverse, as if you’re peering into a world where time flows backward. 
+Inspired by the mind-bending concepts of Christopher Nolan’s "Tenet," this project invites you to explore the magic of temporal inversion in a way that's both playful and profound. 
+
 
 ## Features 
 
@@ -16,6 +17,7 @@ This is a python-based simulation that demonstrates temporal inversion by record
 - **Temporal Inversion**: Creates reversed sequences from recorded footage.
 - **Recordings Management**: Organises and stores recordings with timestamps.
 - **Error Handling**: Robust error management and cleanup
+
 
 ## Technologies 
 
@@ -32,11 +34,25 @@ dependencies:
 pip install opencv-python numpy
 ```
 
-Alternatively, if you want to start from stratch and you are using macOS, install Python:
+Alternatively, if you are starting from scratch and using macOS install python:
 
 ```bash
 brew install python3
 ```
+
+## Breaking down the code: 
+
+Import Statements: 
+
+```Python
+import cv2 // OpenCV library for computer vision and image/video processing tasks. It provides tools for capturing video, manipulating frames, and saving video files.
+import numpy as np
+import time
+from datetime import datetime
+import os
+```
+
+
 
 ```python
 import cv2
