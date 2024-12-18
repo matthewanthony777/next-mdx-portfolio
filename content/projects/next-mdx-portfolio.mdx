@@ -6,23 +6,23 @@
   publishedAt: '2024-12-15'
 ---
 
-Unlock the thrill of time travel with this engaging Python-based simulation! 
+Unlock the thrill of time travel with this Python-based simulation! 
 Imagine capturing a moment on video and then watching it unfold in reverse, as if you’re peering into a world where time flows backward. 
-Inspired by the mind-bending concepts of Christopher Nolan’s "Tenet," this project invites you to explore the magic of temporal inversion in a way that's both playful and profound. 
+Inspired by the concepts of Christopher Nolan’s "Tenet," this project helps you to explore the magic of temporal inversion in a way that's both playful and profound. 
 
 
 ## Features 
 
-- **Real-time Recording**: Capture video with live recording indicator and status display.
-- **Temporal Inversion**: Creates reversed sequences from recorded footage.
-- **Recordings Management**: Organises and stores recordings with timestamps.
-- **Error Handling**: Robust error management and cleanup
+- **Temporal Inversion**: Transform your footage into mind-bending reversed sequences, just like in Tenet.
+- **Live Action Capture**: Watch your recording unfold with a sleek status display that keeps you in the loop.
+- **Smart Storage**: Your temporal experiments are automatically organized with precise timestamps.
+- **Bulletproof Design**: Robust error handling keeps your project running smooth and crash-free
 
 
 ## Technologies 
 
 - **Python**: The programming language driving this project's temporal magic.
-- **OpenCV**: Handles capturing video from the camera and processing those video streams.
+- **OpenCV**: Captures video from the camera and manipulates our video streams.
 - **NumPy**: Provides support for handling mathematical operations on video frames.
 
 ## Getting Started
@@ -44,7 +44,9 @@ brew install python3
 
 Lets jump into our Tenet turnstile! Our streamlined code lets you instantly time-travel, without the lengthy tutorials.
 Just install, run and watch as your computer becomes a time machine. 
-The code is below includes descriptions and explanations for each componeent and function, making it easy to understand.
+The code below includes descriptions and explanations for each component and function, making it easy to understand.
+
+If you've got questions or need a hand with your temporal simualator, hit the contact button up top!
 
 ```python
 // Import required Libraries
@@ -85,32 +87,32 @@ class TenetRecorder:
         """Create and save both normal and inverted sequences"""
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         
-        # Set up video writers
+        // Set up video writers
         fourcc = cv2.VideoWriter_fourcc(*'XVID')
         frame_size = (int(self.cap.get(3)), int(self.cap.get(4)))
         fps = 30
         
-        # Original sequence
+        // Original sequence
         original_file = os.path.join(self.output_dir, f'original_{timestamp}.avi')
         original_writer = cv2.VideoWriter(original_file, fourcc, fps, frame_size)
         
-        # Inverted sequence
+        // Inverted sequence
         inverted_file = os.path.join(self.output_dir, f'inverted_{timestamp}.avi')
         inverted_writer = cv2.VideoWriter(inverted_file, fourcc, fps, frame_size)
         
-        # Save original sequence
+        // Save original sequence
         print("Saving original sequence...")
         for frame in self.frames:
             original_writer.write(frame)
             
-        # Create and save inverted sequence
+        // Create and save inverted sequence
         print("Creating and saving inverted sequence...")
         for frame in reversed(self.frames):
             inverted_writer.write(frame)
             cv2.imshow('Inverted Playback', frame)
             cv2.waitKey(33)  # ~30fps playback
             
-        # Clean up
+        // Clean up
         original_writer.release()
         inverted_writer.release()
         cv2.destroyAllWindows()
@@ -120,14 +122,14 @@ class TenetRecorder:
     def run_full_sequence(self):
         """Run the complete recording and inversion process"""
         try:
-            # Step 1: Record original footage
+            // Step 1: Record original footage
             self.record_original()
             
             if len(self.frames) == 0:
                 print("No frames were recorded!")
                 return
                 
-            # Step 2: Create and save sequences
+            // Step 2: Create and save sequences
             original_file, inverted_file = self.create_inverted_sequence()
             print(f"\nRecording complete!")
             print(f"Original footage saved as: {original_file}")
@@ -155,13 +157,9 @@ if __name__ == "__main__":
     recorder.run_full_sequence()
 ```
 
-## Instructions to run: 
-
-To invert time, simply run project 
-
 ## Conclusion
 
-And so, like the film that inspired it, our Tenet Recorder stands as a testament to the fascinating interplay between time, technology, and human ingenuity. 
+And so, like the film that inspired it, our Tenet time-travel simulator stands as a testament to the fascinating interplay between time, technology, and human ingenuity. 
 Whether you're a film enthusiast, a Python developer, Physicist or simply someone intrigued by the concept of temporal inversion, 
-this project offers a unique window into the possibilities that emerge when we dare to think differently about time itself.
+This project offers a unique window into the possibilities that emerge when we dare to think differently about time itself.
 Remember: What's happened, happened. But with this recorder, you can always watch it happen again - backwards.
