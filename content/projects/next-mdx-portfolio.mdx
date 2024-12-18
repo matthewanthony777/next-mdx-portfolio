@@ -42,12 +42,12 @@ brew install python3
 
 ## The Code:
 
-Lets jump into our Tenet turnstile! Our streamlined code lets you instantly time-travel - no lengthy tutorials.
+Lets jump into our Tenet turnstile! Our streamlined code lets you instantly time-travel, without the lengthy tutorials.
 Just install, run and watch as your computer becomes a time machine. 
 The code is below includes descriptions and explanations for each componeent and function, making it easy to understand.
 
 ```python
-# Import required Libraries
+// Import required Libraries
 import cv2
 import numpy as np
 import time
@@ -72,7 +72,7 @@ class TenetRecorder:
             ret, frame = self.cap.read()
             if ret:
                 self.frames.append(frame.copy())
-                # Add recording indicator
+                // Add recording indicator
                 cv2.circle(frame, (30, 30), 10, (0, 0, 255), -1)
                 cv2.putText(frame, "RECORDING", (50, 40), 
                            cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
