@@ -1,5 +1,5 @@
 ---
-  title: The Artificial Person: Ex Machina and the Future of Legal Rights
+  title: The Artificial Person Ex Machina and the Future of Legal Rights
   summary: This article explores the complex relationship between AI consciousness and legal rights, through the lens of Alex Garland's Sci-fi/TechNoir thriller "Ex Machina", examining issues of AI personhood, copyright law, and creative rights, while analysing how traditional legal frameworks struggle to address questions of machine consciousness and autonomy.
   image: /images/posts/introduction-to-mdx.webp
   author: 'Matthew Anthony Barr'
@@ -8,20 +8,93 @@
 
 This article explores the complex relationship between AI consciousness and legal rights, through the lens of Alex Garland's Sci-fi/TechNoir thriller "Ex Machina", examining issues of AI personhood, copyright law, and creative rights, while analysing how traditional legal frameworks struggle to address questions of machine consciousness and autonomy.
 
-## 
+## The Turing Test and Legal Personhood
 
 
+```Python
+import random
+from typing import List, Dict
+from datetime import datetime
+
+class BlogGenerator:
+    def __init__(self):
+        self.topics = ["technology", "science", "arts", "culture"]
+        self.generated_posts = []
+    
+    def generate_title(self, topic: str) -> str:
+        """Generate an engaging blog post title"""
+        title_templates = [
+            f"The Future of {topic.title()}",
+            f"Why {topic.title()} Matters Today",
+            f"Understanding {topic.title()} in 2024",
+            f"Innovation in {topic.title()}"
+        ]
+        return random.choice(title_templates)
+    
+    def generate_content(self, topic: str, length: int = 500) -> str:
+        """Simulate AI content generation"""
+        # In a real implementation, this would use an AI model
+        return f"Generated content about {topic}... [content would be generated here]"
+    
+    def create_post(self, topic: str = None) -> Dict:
+        """Create a complete blog post"""
+        if not topic:
+            topic = random.choice(self.topics)
+            
+        post = {
+            'id': len(self.generated_posts) + 1,
+            'title': self.generate_title(topic),
+            'content': self.generate_content(topic),
+            'topic': topic,
+            'created_at': datetime.now(),
+            'metadata': {
+                'ai_generated': True,
+                'version': '1.0'
+            }
+        }
+        
+        self.generated_posts.append(post)
+        return post
+
+class BlogManager:
+    def __init__(self):
+        self.generator = BlogGenerator()
+        self.published_posts = []
+    
+    def create_and_publish(self, topic: str = None) -> Dict:
+        """Generate and publish a new blog post"""
+        post = self.generator.create_post(topic)
+        self.published_posts.append(post)
+        return post
+    
+    def get_published_posts(self) -> List[Dict]:
+        """Retrieve all published posts"""
+        return self.published_posts
+
+def main():
+    blog_manager = BlogManager()
+    
+    # Generate some sample posts
+    topics = ["AI", "Machine Learning", "Creative Writing"]
+    for topic in topics:
+        post = blog_manager.create_and_publish(topic)
+        print(f"Published: {post['title']}")
+        
+    # Display all posts
+    print("\nAll Published Posts:")
+    for post in blog_manager.get_published_posts():
+        print(f"- {post['title']} ({post['topic']})")
+
+if __name__ == "__main__":
+    main()
 ```
 
-```
-
-## 
+## Conciousness and Creativity 
 
 
 
 <Counter />
 
-## 
 
 To use MDX, you need to install a plugin for your static site generator or build
 tool. For example, if you're using Gatsby, you can use the `gatsby-plugin-mdx`
