@@ -7,7 +7,7 @@ export default function Intro() {
       <div className='mt-2 flex-1 md:mt-0'>
         <h1 className='title no-underline'>Matthew Anthony Barr.</h1>
         <p className='mt-3 font-light text-muted-foreground'>
-          As a Tech professional, Advocate, and  Writer, I explore all things media, law and technology. Through my commentary, i illuminate the intricate stories and dynamic impacts of these fields, weaving together insights and projects that inspire, inform and drive meaningful change.
+          As a Technology professional, Advocate, and  Writer, I explore all things Media, Law and Technology. Through my commentary, i illuminate complex stories and examine the dynamic impacts of these fields, weaving together insights and projects that inspire, inform and drive meaningful change.
           
         </p>
       </div>
